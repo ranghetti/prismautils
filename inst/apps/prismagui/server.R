@@ -15,7 +15,7 @@ function(input, output, session) {
   observeEvent(input$input_orbit_xml, {
     if (input$input_orbit_xml$type == "text/xml") {
       rv$orbit_xml_name <- input$input_orbit_xml$name
-      rv$orbit_table <- try(read_prisma_orbit(input$input_orbit_xml$datapath), silent = TRUE)
+      rv$orbit_table <- try(prismagui::read_prisma_orbit(input$input_orbit_xml$datapath), silent = TRUE)
       if (inherits(rv$orbit_table, "try-error")) {
         sendSweetAlert(
           session, title =  "File not recognised", type = "error",
