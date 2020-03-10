@@ -4,7 +4,23 @@ require(leaflet)
 require(DT)
 
 header <- dashboardHeader(
-  title = "PRISMA utilities"
+  title = "PRISMA utilities",
+  tags$li(class ="dropdown", tags$h3(
+    style = "color:white;margin:0;padding-top:12px;padding-bottom:12px;padding-left:50px;padding-right:50px;",
+    "Read XML orbit file"
+  )),
+  tags$li(class ="dropdown", tags$a(
+    href="https://github.com/ranghetti/prismautils",
+    tags$img(src="github_logo.png"),
+    style="margin:0;padding-top:2px;padding-bottom:2px;padding-left:10px;padding-right:10px;",
+    target="_blank"
+  )),
+  tags$li(class ="dropdown", tags$a(
+    href="http://www.irea.cnr.it",
+    tags$img(src="irea_logo.png"),
+    style="margin:0;padding-top:2px;padding-bottom:2px;padding-left:10px;padding-right:10px;",
+    target="_blank"
+  ))
 )
 
 body <- dashboardBody(
