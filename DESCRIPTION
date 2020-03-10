@@ -1,0 +1,28 @@
+Package: prismautils
+Type: Package
+Title: R utilities for PRISMA
+Version: 0.1.0
+Authors@R: c(person("Luigi", "Ranghetti", 
+                    email = "ranghetti.l@irea.cnr.it", 
+                    role = c("aut", "cre"), 
+                    comment = c(ORCID = "0000-0001-6207-5188")))
+Description: Utilities related to PRISMA data.
+    At this stage, the package includes a function to read, visualise and
+    export PRISMA orbits, and a GUI to read, visualise and export these data.
+License: GPL-3 + file LICENSE
+Imports: 
+  shiny,
+  shinydashboard,
+  shinyWidgets,
+  leaflet,
+  DT,
+  sf,
+  utils,
+  XML
+Encoding: UTF-8
+URL: https://github.com/ranghetti/prismautils
+BugReports: https://github.com/ranghetti/prismautils/issues
+RoxygenNote: 7.0.2
+Suggests:
+    spelling
+Language: en-GB
