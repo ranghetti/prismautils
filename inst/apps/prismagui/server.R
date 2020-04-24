@@ -89,11 +89,11 @@ function(input, output, session) {
       #   # ))
       # ),
       selection = "none", rownames = FALSE, 
-      extensions = c('Buttons','FixedColumns','Scroller'),
+      extensions = c('Buttons','FixedColumns'),#,'Scroller'),
       options = list(
         dom = 'Bfrtip', buttons = c(I('colvis'), 'copy'), # Buttons 
-        scrollX = TRUE, fixedColumns = TRUE, # FixedColumns
-        deferRender = TRUE, scroller = TRUE # Scroller
+        scrollX = TRUE, fixedColumns = TRUE#, # FixedColumns
+        # deferRender = FALSE, scroller = FALSE # Scroller
       )
     )
     DT
