@@ -78,8 +78,11 @@ function(input, output, session) {
   # Output table
   output$orbit_table <- DT::renderDT({
     req(rv$orbit_table)
+    orbit_table_toshow <- rv$orbit_table[,which(!names(rv$orbit_table) %in% c("Polygon"))]
+    orbit_table_toshow$timeStart <- as.character(orbit_table_toshow$timeStart)
+    orbit_table_toshow$timeStop <- as.character(orbit_table_toshow$timeStop)
     DT <- DT::datatable(
-      rv$orbit_table[,which(!names(rv$orbit_table) %in% c("Polygon"))],
+      orbit_table_toshow,
       # options = list(
       #   paging = ifelse(nrow(rv$orbit_table) > 10, TRUE, FALSE),
       #   
