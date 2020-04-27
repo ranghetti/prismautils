@@ -81,6 +81,9 @@ function(input, output, session) {
     orbit_table_toshow <- rv$orbit_table[,which(!names(rv$orbit_table) %in% c("Polygon"))]
     orbit_table_toshow$timeStart <- as.character(orbit_table_toshow$timeStart)
     orbit_table_toshow$timeStop <- as.character(orbit_table_toshow$timeStop)
+    orbit_table_toshow$rollAngle <- round(orbit_table_toshow$rollAngle, 4)
+    orbit_table_toshow$pitchAngle <- round(orbit_table_toshow$pitchAngle, 4)
+    orbit_table_toshow$solarZenithAngle <- round(orbit_table_toshow$solarZenithAngle, 4)
     DT <- DT::datatable(
       orbit_table_toshow,
       # options = list(
